@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.jeft.composelearn.basicComponents.chpater2.TestButton
 import com.jeft.composelearn.basicComponents.chpater2.TestImage
+import com.jeft.composelearn.basicComponents.chpater2.TestSelector
 import com.jeft.composelearn.basicComponents.chpater2.TestText
 import com.jeft.composelearn.ui.theme.ComposeLearnTheme
 
@@ -35,7 +36,8 @@ class MainActivity : ComponentActivity() {
                 ) {
 //                    TestText()
 //                    TestImage()
-                    TestButton()
+//                    TestButton()
+                    TestSelector()
 //                    Greeting("Android")
 //                    NativeWebView("https://jetpackcompose.cn")
 //                    ModifierTest()
