@@ -1,7 +1,6 @@
 package com.jeft.composelearn.basicComponents.chpater2
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
@@ -12,15 +11,24 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.constraintlayout.compose.ChainStyle
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 import com.jeft.composelearn.R
 
 @Composable
 fun TestLayout() {
 
-    Column(modifier = Modifier.border(2.dp, color = MaterialTheme.colors.primary)) {
+    Column(
+        modifier = Modifier
+            .border(2.dp, color = MaterialTheme.colors.primary)
+            .verticalScroll(
+                rememberScrollState()
+            )
+    ) {
         Surface(
             shape = RoundedCornerShape(8.dp),
             modifier = Modifier
@@ -86,6 +94,135 @@ fun TestLayout() {
                 })
         }
 
+        Spacer(modifier = Modifier.height(40.dp))
+
+        ConstraintLayout(
+            modifier = Modifier
+                .width(300.dp)
+                .height(100.dp)
+                .padding(10.dp)
+        ) {
+            val (usernameTextRef, passwordTextRef, usernameInputRef, passwordInputRef, dividerRef) = remember {
+                createRefs()//createRefs最多创建16个引用
+            }
+            val barrier = createEndBarrier(usernameTextRef, passwordTextRef)
+
+            Text(text = "用户名", modifier = Modifier.constrainAs(usernameTextRef) {
+                top.linkTo(parent.top)
+                start.linkTo(parent.start)
+            })
+
+            Divider(
+                Modifier
+                    .fillMaxWidth()
+                    .constrainAs(dividerRef) {
+                        top.linkTo(usernameTextRef.bottom)
+                        bottom.linkTo(passwordTextRef.top)
+
+                    })
+
+            Text(text = "密码", modifier = Modifier.constrainAs(passwordTextRef) {
+                top.linkTo(usernameTextRef.bottom, 19.dp)
+                start.linkTo(parent.start)
+            })
+            OutlinedTextField(value = "456546461",
+                onValueChange = {},
+                modifier = Modifier.constrainAs(usernameInputRef) {
+                    start.linkTo(barrier, 10.dp)
+                    top.linkTo(usernameTextRef.top)
+                    bottom.linkTo(usernameTextRef.bottom)
+                    height = Dimension.fillToConstraints
+                })
+
+
+            OutlinedTextField(value = "4645136131",
+                onValueChange = {},
+                modifier = Modifier.constrainAs(passwordInputRef) {
+                    start.linkTo(barrier, 10.dp)
+                    top.linkTo(passwordTextRef.top)
+                    bottom.linkTo(passwordTextRef.bottom)
+                    height = Dimension.fillToConstraints
+                })
+
+        }
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        ConstraintLayout(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(200.dp)
+                .padding(10.dp)
+                .background(Color.Gray)
+        ) {
+            val (backgroundRef, avatarRef, textRef) = remember {
+                createRefs()
+            }
+
+            val guideLine = createGuidelineFromTop(0.4f)
+            Box(modifier = Modifier
+                .constrainAs(backgroundRef) {
+                    top.linkTo(parent.top)
+                    bottom.linkTo(guideLine)
+                    width = Dimension.matchParent
+                    height = Dimension.fillToConstraints
+                }
+                .background(Color(0xFF1E9FFF)))
+
+            Image(painter = painterResource(id = R.drawable.avatar),
+                contentDescription = "",
+                modifier = Modifier.constrainAs(avatarRef) {
+                    top.linkTo(guideLine)
+                    bottom.linkTo(guideLine)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                })
+            Text(text = "排雷数码港", color = Color.White, modifier = Modifier.constrainAs(textRef) {
+                top.linkTo(avatarRef.bottom, 10.dp)
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+            })
+
+        }
+
+        Spacer(modifier = Modifier.height(20.dp))
+        ConstraintLayout(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(200.dp)
+                .padding(10.dp)
+                .background(Color.Gray)
+        ) {
+            val (text1Ref, text2Ref, text3Ref, text4Ref) = remember {
+                createRefs()
+            }
+            /*createVerticalChain(
+                text1Ref, text2Ref, text3Ref, text4Ref, chainStyle = ChainStyle.Spread
+            )*/
+            /*createVerticalChain(
+                text1Ref, text2Ref, text3Ref, text4Ref, chainStyle = ChainStyle.Packed
+            )*/
+            createVerticalChain(
+                text1Ref, text2Ref, text3Ref, text4Ref, chainStyle = ChainStyle.SpreadInside
+            )
+            Text(text = "text1", modifier = Modifier.constrainAs(text1Ref) {
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+            })
+
+            Text(text = "text2", modifier = Modifier.constrainAs(text2Ref) {
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+            })
+            Text(text = "text3", modifier = Modifier.constrainAs(text3Ref) {
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+            })
+            Text(text = "text4", modifier = Modifier.constrainAs(text4Ref) {
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+            })
+        }
     }
 
 }
