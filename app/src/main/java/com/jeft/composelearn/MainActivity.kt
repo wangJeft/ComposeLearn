@@ -19,7 +19,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
-import com.jeft.composelearn.basicComponents.chpater2.*
+import com.jeft.composelearn.basicComponents.chapter2.*
+import com.jeft.composelearn.basicComponents.chapter3.WelcomePage
 import com.jeft.composelearn.ui.theme.ComposeLearnTheme
 
 class MainActivity : ComponentActivity() {
@@ -29,8 +30,9 @@ class MainActivity : ComponentActivity() {
             ComposeLearnTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background
+                    modifier = Modifier.fillMaxSize()
                 ) {
+                    //chapter2
 //                    TestText()
 //                    TestImage()
 //                    TestButton()
@@ -39,7 +41,11 @@ class MainActivity : ComponentActivity() {
 //                    TestProgress()
 //                    TestLayout()
 //                    TestScaffold()
-                    TestList()
+//                    TestList()
+                    //chapter3
+                    WelcomePage()
+
+
 //                    Greeting("Android")
 //                    NativeWebView("https://jetpackcompose.cn")
 //                    ModifierTest()

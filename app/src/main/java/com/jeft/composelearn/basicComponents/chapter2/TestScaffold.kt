@@ -1,4 +1,4 @@
-package com.jeft.composelearn.basicComponents.chpater2
+package com.jeft.composelearn.basicComponents.chapter2
 
 import android.annotation.SuppressLint
 import androidx.activity.compose.BackHandler

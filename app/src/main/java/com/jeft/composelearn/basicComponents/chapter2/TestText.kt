@@ -1,4 +1,4 @@
-package com.jeft.composelearn.basicComponents.chpater2
+package com.jeft.composelearn.basicComponents.chapter2
 
 import android.content.Intent
 import android.net.Uri

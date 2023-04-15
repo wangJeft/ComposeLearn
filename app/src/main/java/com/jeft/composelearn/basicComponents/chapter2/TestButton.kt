@@ -1,7 +1,6 @@
-package com.jeft.composelearn.basicComponents.chpater2
+package com.jeft.composelearn.basicComponents.chapter2
 
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.*

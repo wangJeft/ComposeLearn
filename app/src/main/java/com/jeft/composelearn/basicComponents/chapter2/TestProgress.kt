@@ -1,4 +1,4 @@
-package com.jeft.composelearn.basicComponents.chpater2
+package com.jeft.composelearn.basicComponents.chapter2
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.border
@@ -8,7 +8,6 @@ import androidx.compose.material.ProgressIndicatorDefaults.IndicatorBackgroundOp
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
