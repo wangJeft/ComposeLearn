@@ -20,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.jeft.composelearn.basicComponents.chapter2.*
+import com.jeft.composelearn.basicComponents.chapter3.HomePage
 import com.jeft.composelearn.basicComponents.chapter3.WelcomePage
 import com.jeft.composelearn.ui.theme.ComposeLearnTheme
 
@@ -43,7 +44,7 @@ class MainActivity : ComponentActivity() {
 //                    TestScaffold()
 //                    TestList()
                     //chapter3
-                    WelcomePage()
+                    HomePage()
 
 
 //                    Greeting("Android")
