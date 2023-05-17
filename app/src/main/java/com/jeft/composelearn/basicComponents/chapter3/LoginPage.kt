@@ -65,18 +65,6 @@ fun LoginTitle() {
 
 @Composable
 fun LoginInputBox() {
-
-    @Composable
-    fun LoginTextField(placeHolder: String) {
-        OutlinedTextField(value = "",
-            onValueChange = {},
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(56.dp)
-                .clip(Shapes.small),
-            placeholder = { Text(text = placeHolder, style = body1, color = gray) })
-    }
-
     Column {
         LoginTextField(placeHolder = "Email address")
         Spacer(modifier = Modifier.height(8.dp))
@@ -84,7 +72,16 @@ fun LoginInputBox() {
 
     }
 }
-
+@Composable
+fun LoginTextField(placeHolder: String) {
+    OutlinedTextField(value = "",
+        onValueChange = {},
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(56.dp)
+            .clip(Shapes.small),
+        placeholder = { Text(text = placeHolder, style = body1, color = gray) })
+}
 
 @Composable
 fun HintWithUnderline() {

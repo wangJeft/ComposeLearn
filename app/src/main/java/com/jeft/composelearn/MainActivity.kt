@@ -21,7 +21,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.jeft.composelearn.basicComponents.chapter2.*
 import com.jeft.composelearn.basicComponents.chapter3.HomePage
+import com.jeft.composelearn.basicComponents.chapter3.LoginPage
+import com.jeft.composelearn.basicComponents.chapter3.HomePage
 import com.jeft.composelearn.basicComponents.chapter3.WelcomePage
+import com.jeft.composelearn.basicComponents.chapter4.CounterScreen
+import com.jeft.composelearn.basicComponents.chapter4.CounterScreen2
 import com.jeft.composelearn.ui.theme.ComposeLearnTheme
 
 class MainActivity : ComponentActivity() {
@@ -43,9 +47,17 @@ class MainActivity : ComponentActivity() {
 //                    TestLayout()
 //                    TestScaffold()
 //                    TestList()
+
                     //chapter3
                     HomePage()
+//                    WelcomePage()
+//                    LoginPage()
+//                    HomePage()
 
+
+                    //chapter4
+//                    CounterScreen()
+                    CounterScreen2()
 
 //                    Greeting("Android")
 //                    NativeWebView("https://jetpackcompose.cn")
