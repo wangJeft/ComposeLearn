@@ -1,4 +1,4 @@
-package com.jeft.composelearn.basicComponents.chapter2
+package com.jeft.composelearn.chapter2
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row

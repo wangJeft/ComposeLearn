@@ -9,7 +9,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -19,12 +18,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
-import com.jeft.composelearn.basicComponents.chapter2.*
-import com.jeft.composelearn.basicComponents.chapter3.HomePage
-import com.jeft.composelearn.basicComponents.chapter3.LoginPage
-import com.jeft.composelearn.basicComponents.chapter3.WelcomePage
-import com.jeft.composelearn.basicComponents.chapter4.CounterScreen
-import com.jeft.composelearn.basicComponents.chapter4.CounterScreen2
+import com.jeft.composelearn.chapter5.DrawCache
+import com.jeft.composelearn.chapter5.WaveLoadingDemo
 import com.jeft.composelearn.ui.theme.ComposeLearnTheme
 
 class MainActivity : ComponentActivity() {
@@ -55,8 +50,13 @@ class MainActivity : ComponentActivity() {
 
                     //chapter4
 //                    CounterScreen()
-                    CounterScreen2()
+//                    CounterScreen2()
 
+                    //chapter5
+//                    IntrinsicsMeasure()
+//                    TwoText(text1 = "start", text2 = "end")
+//                    DrawCache()
+                    WaveLoadingDemo()
 //                    Greeting("Android")
 //                    NativeWebView("https://jetpackcompose.cn")
 //                    ModifierTest()

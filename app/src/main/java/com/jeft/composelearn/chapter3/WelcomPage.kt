@@ -1,4 +1,4 @@
-package com.jeft.composelearn.basicComponents.chapter3
+package com.jeft.composelearn.chapter3
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

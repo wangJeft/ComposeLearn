@@ -1,4 +1,4 @@
-package com.jeft.composelearn.basicComponents.chapter2
+package com.jeft.composelearn.chapter2
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.border

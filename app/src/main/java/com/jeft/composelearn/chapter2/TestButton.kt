@@ -1,4 +1,4 @@
-package com.jeft.composelearn.basicComponents.chapter2
+package com.jeft.composelearn.chapter2
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.interaction.MutableInteractionSource

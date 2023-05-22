@@ -1,8 +1,7 @@
-package com.jeft.composelearn.basicComponents.chapter4
+package com.jeft.composelearn.chapter4
 
 import android.os.Bundle
 import android.os.Parcelable
-import android.view.View
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
