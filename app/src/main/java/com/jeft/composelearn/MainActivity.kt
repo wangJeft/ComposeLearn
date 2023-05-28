@@ -1,5 +1,8 @@
 package com.jeft.composelearn
 
+import android.Manifest
+import android.content.Context
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -18,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.core.app.ActivityCompat
 import com.jeft.composelearn.chapter5.DrawCache
 import com.jeft.composelearn.chapter5.WaveLoadingDemo
 import com.jeft.composelearn.ui.theme.ComposeLearnTheme
