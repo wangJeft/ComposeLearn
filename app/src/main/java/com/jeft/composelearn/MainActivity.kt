@@ -24,6 +24,14 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.app.ActivityCompat
 import com.jeft.composelearn.chapter5.DrawCache
 import com.jeft.composelearn.chapter5.WaveLoadingDemo
+import com.jeft.composelearn.chapter6.AnimatedContentTest
+import com.jeft.composelearn.chapter6.AnimatedFavButton
+import com.jeft.composelearn.chapter6.AnimatedShimmerItem
+import com.jeft.composelearn.chapter6.AnimatedVisibilityTest
+import com.jeft.composelearn.chapter6.CrossfadeTest
+import com.jeft.composelearn.chapter6.FavoriteButton
+import com.jeft.composelearn.chapter6.LowLevelAnimateApiTest
+import com.jeft.composelearn.gestures.ClickGestures
 import com.jeft.composelearn.ui.theme.ComposeLearnTheme
 
 class MainActivity : ComponentActivity() {
@@ -60,7 +68,21 @@ class MainActivity : ComponentActivity() {
 //                    IntrinsicsMeasure()
 //                    TwoText(text1 = "start", text2 = "end")
 //                    DrawCache()
-                    WaveLoadingDemo()
+//                    WaveLoadingDemo()
+
+                    //chapter6
+//                    AnimatedVisibilityTest()
+//                    AnimatedContentTest()
+//                    CrossfadeTest()
+//                    LowLevelAnimateApiTest()
+//                    AnimatedShimmerItem()
+                    FavoriteButton()
+                    //gestures
+//                    ClickGestures()
+
+
+
+
 //                    Greeting("Android")
 //                    NativeWebView("https://jetpackcompose.cn")
 //                    ModifierTest()
