@@ -1,4 +1,4 @@
-package com.jeft.composelearn.chapter5
+package com.jeft.composelearn.chapter5_draw
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize

@@ -1,4 +1,4 @@
-package com.jeft.composelearn.chapter6
+package com.jeft.composelearn.chapter6_Animation
 
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode

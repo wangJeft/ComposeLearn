@@ -1,4 +1,4 @@
-package com.jeft.composelearn.chapter5
+package com.jeft.composelearn.chapter5_draw
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode

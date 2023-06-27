@@ -1,4 +1,4 @@
-package com.jeft.composelearn.chapter5
+package com.jeft.composelearn.chapter5_draw
 
 import android.graphics.Bitmap
 import androidx.annotation.FloatRange

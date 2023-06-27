@@ -1,4 +1,4 @@
-package com.jeft.composelearn.chapter6
+package com.jeft.composelearn.chapter6_Animation
 
 import androidx.compose.animation.Animatable
 import androidx.compose.animation.AnimatedContent
@@ -16,7 +16,6 @@ import androidx.compose.animation.core.VectorConverter
 import androidx.compose.animation.core.animateDp
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.createChildTransition
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.keyframes

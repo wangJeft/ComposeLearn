@@ -1,8 +1,5 @@
 package com.jeft.composelearn
 
-import android.Manifest
-import android.content.Context
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -21,17 +18,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
-import androidx.core.app.ActivityCompat
-import com.jeft.composelearn.chapter5.DrawCache
-import com.jeft.composelearn.chapter5.WaveLoadingDemo
-import com.jeft.composelearn.chapter6.AnimatedContentTest
-import com.jeft.composelearn.chapter6.AnimatedFavButton
-import com.jeft.composelearn.chapter6.AnimatedShimmerItem
-import com.jeft.composelearn.chapter6.AnimatedVisibilityTest
-import com.jeft.composelearn.chapter6.CrossfadeTest
-import com.jeft.composelearn.chapter6.FavoriteButton
-import com.jeft.composelearn.chapter6.LowLevelAnimateApiTest
-import com.jeft.composelearn.gestures.ClickGestures
+import com.jeft.composelearn.chapter7_Gestures.AutoNestedScroll
+import com.jeft.composelearn.chapter7_Gestures.ClickGestures
+import com.jeft.composelearn.chapter7_Gestures.DragSample
+import com.jeft.composelearn.chapter7_Gestures.DragSample2
+import com.jeft.composelearn.chapter7_Gestures.ScrollableSample
+import com.jeft.composelearn.chapter7_Gestures.SwipeableSample
 import com.jeft.composelearn.ui.theme.ComposeLearnTheme
 
 class MainActivity : ComponentActivity() {
@@ -76,10 +68,14 @@ class MainActivity : ComponentActivity() {
 //                    CrossfadeTest()
 //                    LowLevelAnimateApiTest()
 //                    AnimatedShimmerItem()
-                    FavoriteButton()
+//                    FavoriteButton()
+
                     //gestures
 //                    ClickGestures()
-
+//                    ScrollableSample()
+//                    DragSample()
+//                    DragSample2()
+                    SwipeableSample()
 
 
 

@@ -1,4 +1,4 @@
-package com.jeft.composelearn.chapter6
+package com.jeft.composelearn.chapter6_Animation
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.EnterExitState
@@ -160,6 +160,7 @@ fun AnimatedVisibilityTest3() {
  */
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
+@Preview
 fun AnimatedVisibilityTest4() {
     Column {
         var visible by remember { mutableStateOf(true) }

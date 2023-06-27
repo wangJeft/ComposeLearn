@@ -1,4 +1,4 @@
-package com.jeft.composelearn.chapter6
+package com.jeft.composelearn.chapter6_Animation
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -35,7 +35,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.jeft.composelearn.ui.theme.Purple500
-import com.jeft.composelearn.ui.theme.button
 
 data class UiState(
     val backgroundColor: Color, val textColor: Color, val roundedCorner: Int, val buttonWidth: Dp
