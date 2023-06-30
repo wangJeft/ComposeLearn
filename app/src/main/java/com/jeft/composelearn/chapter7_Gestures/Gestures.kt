@@ -13,6 +13,7 @@ import androidx.compose.foundation.gestures.rememberScrollableState
 import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
@@ -189,13 +190,14 @@ fun SwipeableSample() {
         Box(
             modifier = Modifier
                 .width(width)
+                .background(Color.LightGray)
                 .swipeable(
                     state = swipeableState,
                     anchors = anchors,
                     thresholds = { _, _ -> FractionalThreshold(0.3f) },
                     orientation = Orientation.Horizontal
                 )
-                .background(Color.LightGray)
+
         ) {
             Box(modifier = Modifier
                 .offset { IntOffset(swipeableState.offset.value.roundToInt(), 0) }
