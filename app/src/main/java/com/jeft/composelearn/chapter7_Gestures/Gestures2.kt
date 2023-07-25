@@ -25,6 +25,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.FractionalThreshold
+import androidx.compose.material.Text
 import androidx.compose.material.rememberSwipeableState
 import androidx.compose.material.swipeable
 import androidx.compose.runtime.Composable
@@ -250,8 +251,8 @@ fun SubComposeSmartSwipeRefresh(indicator: @Composable () -> Unit, content: @Com
 fun SmartSwipeRefreshDemo() {
     SmartSwipeRefresh(onRefresh = {}) {
         Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-            repeat(20){
-                DraggableDemo()
+            repeat(50){
+                Text(text = "SmartSwipeRefreshDemo")
             }
         }
     }

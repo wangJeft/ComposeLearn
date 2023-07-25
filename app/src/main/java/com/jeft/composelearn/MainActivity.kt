@@ -23,6 +23,7 @@ import com.jeft.composelearn.chapter7_Gestures.ClickGestures
 import com.jeft.composelearn.chapter7_Gestures.DragSample
 import com.jeft.composelearn.chapter7_Gestures.DragSample2
 import com.jeft.composelearn.chapter7_Gestures.Gestures2
+import com.jeft.composelearn.chapter7_Gestures.Gestures3
 import com.jeft.composelearn.chapter7_Gestures.ScrollableSample
 import com.jeft.composelearn.chapter7_Gestures.SwipeableSample
 import com.jeft.composelearn.ui.theme.ComposeLearnTheme
@@ -77,7 +78,7 @@ class MainActivity : ComponentActivity() {
 //                    DragSample()
 //                    DragSample2()
 //                    SwipeableSample()
-                    Gestures2()
+                    Gestures3()
 
 
 
