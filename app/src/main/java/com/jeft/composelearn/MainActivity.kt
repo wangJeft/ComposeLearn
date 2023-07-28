@@ -26,6 +26,7 @@ import com.jeft.composelearn.chapter7_Gestures.Gestures2
 import com.jeft.composelearn.chapter7_Gestures.Gestures3
 import com.jeft.composelearn.chapter7_Gestures.ScrollableSample
 import com.jeft.composelearn.chapter7_Gestures.SwipeableSample
+import com.jeft.composelearn.chapter8_nav.NavigationTest
 import com.jeft.composelearn.ui.theme.ComposeLearnTheme
 
 class MainActivity : ComponentActivity() {
@@ -78,8 +79,10 @@ class MainActivity : ComponentActivity() {
 //                    DragSample()
 //                    DragSample2()
 //                    SwipeableSample()
-                    Gestures3()
+//                    Gestures3()
 
+                    //chapter8
+                    NavigationTest()
 
 
 //                    Greeting("Android")

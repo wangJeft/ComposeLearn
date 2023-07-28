@@ -58,6 +58,7 @@ dependencies {
     implementation "androidx.compose.material:material:$compose_ui_version"
     implementation "androidx.constraintlayout:constraintlayout-compose:1.0.1"
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
+    implementation "androidx.navigation:navigation-compose:2.5.3"
 
     //下面的这俩要成对出现,不然会无法preview
     implementation "androidx.compose.ui:ui:$compose_ui_version"
