@@ -8,17 +8,18 @@ import androidx.compose.material.ProgressIndicatorDefaults.IndicatorBackgroundOp
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
+@Preview
 @Composable
 fun TestProgress() {
     var progress by remember {
         mutableStateOf(0.1f)
     }
 
-    val animatedProgress by animateFloatAsState(
-        targetValue = progress, animationSpec = ProgressIndicatorDefaults.ProgressAnimationSpec
-    )
+    val animatedProgress by animateFloatAsState(targetValue = progress, animationSpec = ProgressIndicatorDefaults.ProgressAnimationSpec, label = "progressAnim")
     Column(
         modifier = Modifier
             .padding(10.dp)
@@ -31,7 +32,8 @@ fun TestProgress() {
             backgroundColor = MaterialTheme.colors.primary.copy(alpha = IndicatorBackgroundOpacity),
         )
         Spacer(modifier = Modifier.height(30.dp))
-        LinearProgressIndicator(progress = animatedProgress)
+
+        LinearProgressIndicator(progress = animatedProgress, strokeCap = StrokeCap.Round)
         Spacer(modifier = Modifier.height(30.dp))
         Row {
 

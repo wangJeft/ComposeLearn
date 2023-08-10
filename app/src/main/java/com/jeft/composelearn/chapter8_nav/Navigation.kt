@@ -1,5 +1,6 @@
 package com.jeft.composelearn.chapter8_nav
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -27,17 +28,25 @@ fun NavigationTest() {
         composable("firstPage") {
             FirstPage() {
                 navController.navigate("secondPage/firstPage") {
-                    popUpTo("firstPage")
+//                    popUpTo("firstPage")
                 }
             }
         }
 
         composable(
-            "secondPage/{fromPage}",
-            arguments = listOf(navArgument("fromPage") { type = NavType.StringType })
+            "secondPage/{fromPage}?isFirst={isFirst}",
+            arguments = listOf(
+                navArgument("fromPage") { type = NavType.StringType },
+                navArgument("isFirst") {
+                    type = NavType.BoolType
+                    defaultValue = true
+                    nullable = true
+                }
+            )
         ) { navBackStackEntry ->
             SecondPage(navBackStackEntry.arguments?.getString("fromPage") ?: "") {
-                navController.popBackStack()
+                navController.navigate("thirdPage")
+//                navController.popBackStack()
 //                navController.popBackStack("firstPage", false)
                 /*navController.navigate("firstPage") {
                     popUpTo("firstPage")
@@ -45,6 +54,16 @@ fun NavigationTest() {
                 }*/
             }
         }
+
+        composable("thirdPage") {
+            ThirdPage() {
+                navController.navigate("firstPage") {
+                    launchSingleTop = true
+                    popUpTo("firstPage")
+                }
+            }
+        }
+
     }
 }
 
@@ -56,6 +75,7 @@ fun FirstPage(toSecondPage: () -> Unit = {}) {
             .fillMaxSize()
             .background(Color.Cyan)
     ) {
+        Log.d("NavigationTest", "FirstPage: ")
         Column(modifier = Modifier.fillMaxWidth()) {
             Text(text = "first page", modifier = Modifier.align(alignment = Alignment.CenterHorizontally))
         }
@@ -79,6 +99,27 @@ fun SecondPage(fromPage: String = "", toFirstPage: () -> Unit = {}) {
                 .fillMaxWidth()
         ) {
             Text(text = "second page: $fromPage", modifier = Modifier.align(alignment = Alignment.CenterHorizontally))
+        }
+
+        Button(onClick = { toFirstPage() }, modifier = Modifier.align(Alignment.Center)) {
+            Text(text = "go to third page")
+        }
+    }
+}
+
+@Preview
+@Composable
+fun ThirdPage(toFirstPage: () -> Unit = {}) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.DarkGray)
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+        ) {
+            Text(text = "third page: ", modifier = Modifier.align(alignment = Alignment.CenterHorizontally))
         }
 
         Button(onClick = { toFirstPage() }, modifier = Modifier.align(Alignment.Center)) {

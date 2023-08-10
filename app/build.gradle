@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -59,6 +61,17 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout-compose:1.0.1"
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
     implementation "androidx.navigation:navigation-compose:2.5.3"
+
+    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-compiler:2.44"
+
+    implementation "com.google.accompanist:accompanist-systemuicontroller:0.30.1"
+    implementation "com.google.accompanist:accompanist-pager:0.30.1"
+    implementation "com.google.accompanist:accompanist-swiperefresh:0.30.1"
+    implementation "com.google.accompanist:accompanist-insets-ui:0.30.1"
+
+    implementation "io.coil-kt:coil-compose:2.3.0"
 
     //下面的这俩要成对出现,不然会无法preview
     implementation "androidx.compose.ui:ui:$compose_ui_version"

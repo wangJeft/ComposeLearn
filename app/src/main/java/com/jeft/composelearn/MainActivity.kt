@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.core.view.WindowCompat
 import com.jeft.composelearn.chapter7_Gestures.AutoNestedScroll
 import com.jeft.composelearn.chapter7_Gestures.ClickGestures
 import com.jeft.composelearn.chapter7_Gestures.DragSample
@@ -26,12 +27,21 @@ import com.jeft.composelearn.chapter7_Gestures.Gestures2
 import com.jeft.composelearn.chapter7_Gestures.Gestures3
 import com.jeft.composelearn.chapter7_Gestures.ScrollableSample
 import com.jeft.composelearn.chapter7_Gestures.SwipeableSample
+import com.jeft.composelearn.chapter8_nav.Navigation2
 import com.jeft.composelearn.chapter8_nav.NavigationTest
+import com.jeft.composelearn.chapter9_lib.CoilTest
+import com.jeft.composelearn.chapter9_lib.FlowLayoutTest
+import com.jeft.composelearn.chapter9_lib.PagerTest
+import com.jeft.composelearn.chapter9_lib.SwipeRefreshTest
+import com.jeft.composelearn.chapter9_lib.SystemUiTest
 import com.jeft.composelearn.ui.theme.ComposeLearnTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
             ComposeLearnTheme {
                 // A surface container using the 'background' color from the theme
@@ -82,7 +92,15 @@ class MainActivity : ComponentActivity() {
 //                    Gestures3()
 
                     //chapter8
-                    NavigationTest()
+//                    NavigationTest()
+//                    Navigation2()
+
+                    //chapter9
+//                    PagerTest()
+//                    SwipeRefreshTest()
+//                    FlowLayoutTest()
+//                    SystemUiTest()
+                    CoilTest()
 
 
 //                    Greeting("Android")

@@ -3,8 +3,9 @@ package com.jeft.composelearn
 import android.app.ActivityManager
 import android.app.Application
 import android.os.Process
-import android.util.Log
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class ComposeApp : Application() {
     companion object {
         lateinit var app: Application
