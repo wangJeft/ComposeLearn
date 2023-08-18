@@ -1,6 +1,5 @@
 package com.jeft.composelearn.chapter9_lib
 
-import android.widget.Space
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -63,6 +62,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import org.w3c.dom.Text
 
 @Composable
 fun SystemUiTest() {
@@ -192,8 +192,10 @@ fun CoilTest() {
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
     ) {
+
         val imageUrl = "https://t7.baidu.com/it/u=3478850435,1363883222&fm=193&f=GIF"
         AsyncImage(model = imageUrl, contentDescription = "")
+
         Divider(
             modifier = Modifier
                 .height(2.dp)
@@ -212,17 +214,21 @@ fun CoilTest() {
             onSuccess = {},
             contentDescription = ""
         )
+
         Divider(
             modifier = Modifier
                 .height(2.dp)
                 .fillMaxWidth()
         )
+
         SubcomposeAsyncImage(model = imageUrl, loading = { CircularProgressIndicator() }, contentDescription = "")
+
         Divider(
             modifier = Modifier
                 .height(2.dp)
                 .fillMaxWidth()
         )
+
         SubcomposeAsyncImage(model = imageUrl, contentDescription = "") {
             if (painter.state is AsyncImagePainter.State.Loading || painter.state is AsyncImagePainter.State.Error) {
                 CircularProgressIndicator()
