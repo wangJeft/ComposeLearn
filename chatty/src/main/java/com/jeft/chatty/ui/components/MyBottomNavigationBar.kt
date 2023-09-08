@@ -58,4 +58,8 @@ enum class BottomScreen(
 object AppScreen {
     const val main = "main"
     const val register = "register"
+    const val login = "login"
+    const val profileEdit = "profile_edit"
+    const val conversation = "conversation"
+
 }

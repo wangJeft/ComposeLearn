@@ -1,4 +1,4 @@
-package com.jeft.chatty.home
+package com.jeft.chatty.screens.home
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -17,11 +17,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.jeft.chatty.bean.UserProfileData
-import com.jeft.chatty.ui.components.CenterRwo
+import com.jeft.chatty.ui.components.AppScreen
+import com.jeft.chatty.ui.components.CenterRow
 import com.jeft.chatty.ui.components.CircleShapeImage
 import com.jeft.chatty.ui.components.NumberChips
 import com.jeft.chatty.ui.components.WidthSpacer
 import com.jeft.chatty.ui.theme.chattyColors
+import com.jeft.chatty.ui.utils.LocalNavController
 import kotlin.random.Random
 
 @Composable
@@ -30,15 +32,16 @@ fun FriendMessageItem(
     lastMag: String,
     unreadCount: Int = 0
 ) {
+    val navController = LocalNavController.current
     Surface(
         modifier = Modifier
             .fillMaxWidth()
             .clickable {
-                // TODO: navController
+                navController.navigate("${AppScreen.conversation}/${userProfileData.uid}")
             },
         color = MaterialTheme.chattyColors.backgroundColor
     ) {
-        CenterRwo(modifier = Modifier.padding(vertical = 8.dp, horizontal = 10.dp)) {
+        CenterRow(modifier = Modifier.padding(vertical = 8.dp, horizontal = 10.dp)) {
             CircleShapeImage(size = 60.dp, painter = painterResource(id = userProfileData.avatarRes))
             Spacer(modifier = Modifier.padding(horizontal = 10.dp))
             Column(modifier = Modifier.weight(1f)) {

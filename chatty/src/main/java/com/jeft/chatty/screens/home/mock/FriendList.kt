@@ -1,4 +1,4 @@
-package com.jeft.chatty.home.mock
+package com.jeft.chatty.screens.home.mock
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf

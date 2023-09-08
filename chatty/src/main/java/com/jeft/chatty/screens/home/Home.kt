@@ -1,4 +1,4 @@
-package com.jeft.chatty.home
+package com.jeft.chatty.screens.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,10 +11,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.jeft.chatty.home.mock.displayMessages
+import androidx.compose.ui.tooling.preview.Preview
+import com.jeft.chatty.screens.home.mock.displayMessages
 import com.jeft.chatty.ui.theme.chattyColors
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Home(drawerState: DrawerState) {
     Scaffold(topBar = {

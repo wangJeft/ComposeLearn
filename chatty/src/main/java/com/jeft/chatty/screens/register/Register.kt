@@ -1,4 +1,4 @@
-package com.jeft.chatty.register
+package com.jeft.chatty.screens.register
 
 import android.net.Uri
 import androidx.activity.compose.BackHandler

@@ -1,5 +1,6 @@
 package com.jeft.chatty.ui.components
 
+import android.annotation.SuppressLint
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.navigationBarsPadding
@@ -19,33 +20,37 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
-import com.jeft.chatty.home.Home
+import com.jeft.chatty.screens.drawer.PersonalProfile
+import com.jeft.chatty.screens.home.Home
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 fun AppScaffold() {
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val pagerState = rememberPagerState()
     val scope = rememberCoroutineScope()
     var selectedScreen by remember { mutableStateOf(0) }
+
     ModalNavigationDrawer(
-        drawerContent = { /*TODO*/ },
+        drawerContent = { PersonalProfile() },
         drawerState = drawerState,
         modifier = Modifier.navigationBarsPadding()
     ) {
         Scaffold(bottomBar = {
-            MyBottomNavigationBar(selectedScreen = selectedScreen, onClick = { index ->
-                scope.launch {
-                    pagerState.scrollToPage(index)
-                }
-            })
-        }) { innerPadding ->
+            MyBottomNavigationBar(
+                selectedScreen = selectedScreen,
+                onClick = { index ->
+                    scope.launch {
+                        pagerState.scrollToPage(index)
+                    }
+                })
+        }) {
             HorizontalPager(
                 pageCount = BottomScreen.values().size,
                 state = pagerState,
                 userScrollEnabled = false,
-                contentPadding = innerPadding
             ) { page: Int ->
                 when (BottomScreen.values()[page]) {
                     BottomScreen.Message -> Home(drawerState = drawerState)

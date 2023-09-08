@@ -1,4 +1,4 @@
-package com.jeft.chatty.home
+package com.jeft.chatty.screens.home
 
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.icons.Icons
